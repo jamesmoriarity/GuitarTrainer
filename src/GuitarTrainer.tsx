@@ -1,3 +1,4 @@
+import { immerable } from "immer"
 import React from "react"
 import ExerciseComponents from "./Exercises/ExerciseComponents"
 import { GuitarSettings } from "./Guitar/GuitarSettings"
@@ -5,6 +6,7 @@ import { GuitarSettings } from "./Guitar/GuitarSettings"
 // import Player from "./Player/Player"
 
 class GuitarTrainerState{
+  [immerable] = true
   exerciseComponent!:Function
   exerciseName:string
   guitarSettings:GuitarSettings
